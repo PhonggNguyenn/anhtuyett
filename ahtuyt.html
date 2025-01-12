@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Love Note</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="message"></h1>
+    </div>
+    <style>
+        body {
+        font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+        background-color: #f4cef3; 
+        color: #6a0dad; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff6fb;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 40px;
+            color: #ff69b4; 
+            text-shadow: 2px 2px 4px #7a7a7a;
+        }
+        
+    </style>
+</body>
+<script>
+    const messageEl = document.getElementById('message');
+    const text = "Em yêu Ánh Tuyết nhiềuuu❤️";
+    let index = 0;
+
+    function animateText() {
+        if (index < text.length) {
+            messageEl.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(animateText, 50); 
+        }
+    }
+
+    animateText();  
+
+</script>
+</html>
